@@ -1,0 +1,31 @@
+<ion-view view-title="Feels Like">
+    <ion-content>
+        <!--<div class="row">
+            <div class="col">
+                <p>Zip: {{userLocation}}</p>
+            </div>
+        </div>-->
+        <div class='row'>
+            <div class='col'>
+                <p>{{conditions.weather}}</p>
+                <img src='{{conditions.icon_url}}' />
+            </div>
+            <div class='col'>
+                <p>Feels like: {{conditions.feelslike_f}}</p>
+            </div>
+        </div>
+        <div class='row'>
+            <div clas='col'>
+                <p>"It's cold as balls and fucking snowing"</p>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col'>Actual Temp: {{conditions.temp_f}}</div>
+            <div class='col'>Precip Chance: {{forecast.pop}}</div>
+        </div>
+        <div class='row'>
+            <div class='col'>Wind: {{conditions.wind_mph}}</div>
+            <div class='col'>Humidity: {{conditions.relative_humidity}}</div>
+        </div>
+    </ion-content>
+</ion-view>
