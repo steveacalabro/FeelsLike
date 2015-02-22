@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Feels Like": {
+            "applicationId": "PMrj1OC7vN86rzkSyZUzLzNVvWgBsLAebUSiO58s", 
+            "masterKey": "2xyqzRS2Fa7gr0mpaaJdpFQRuQZiiUrb3E2HTodj"
+        }, 
+        "_default": {
+            "link": "Feels Like"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}
