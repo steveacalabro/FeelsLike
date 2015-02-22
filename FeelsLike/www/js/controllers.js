@@ -334,14 +334,17 @@ angular.module('starter.controllers', [])
             if (customInputs == true) {
                 //console.log('yo');
                 Parse.Cloud.run('phrase', {
-                    temp: 6,
+                    temp: 1,
                     wind: 1,
-                    humidity: 0,
+                    humidity: 1,
                     serverity: 0,
-                    type: 3,
-                    nsfw: false
+                    type: 1,
+                    nsfw: nsfw
                 }).then(function (result) {
                     $scope.phrase = result;
+                    $scope.conditions.feelslike_f = 18;
+                    $scope.conditions.weather = 'Snow';
+                    $scope.iconUrl = 'http://icons.wxug.com/i/c/i/snow.gif';
                     //console.log(result);
                 });
             } else {
