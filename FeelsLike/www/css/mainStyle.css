@@ -28,7 +28,7 @@
 /* Side Menu */
 .item-complex .item-content,
 .item-radio .item-content {
-  background-color: #444!important;
+  background-color: #444;
   color: #efefef;
 }
 .menu-left {

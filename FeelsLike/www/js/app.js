@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'parse-angular'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -49,7 +49,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                 }
             }
         })
-         .state('app.register', {
+        .state('app.submitPhrase', {
+            url: "/submitPhrase",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/submitPhrase.html",
+                    controller: 'SubmitCtrl'
+                }
+            }
+        })
+        .state('app.register', {
             url: "/register",
             views: {
                 'menuContent': {
@@ -59,7 +68,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         });
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/app/login');
+        $urlRouterProvider.otherwise('/app/home');
     })
     .run(function ($state, $rootScope) {
         Parse.initialize('WAZOc6VldvRSqy8KjNPC71O2MoQRf7Q7K5a3xp37', 'WRZy60GqOSfbsfgZWgTJuELwg0HFqYhHyulIOMOW');

@@ -25,15 +25,15 @@
         </div>
         <div class='row'>
             <div class='col phrase'>
-                <p>"It's cold as balls and fucking snowing"</p>
+                <p>"{{phrase}}"</p>
             </div>
         </div>
         <div class='row actions'>
             <div class='col'>
-                <a class="button button-icon icon ion-thumbsup">&nbsp;+10</a>
+                <a class="button button-icon icon ion-thumbsup" ng-click='like()' classAdd>&nbsp;+{{likes}}</a>
             </div>
             <div class='col'>
-                <a class="button button-icon icon ion-thumbsdown">&nbsp;-10</a>
+                <a class="button button-icon icon ion-thumbsdown" ng-click='dislike()' classAdd>&nbsp;-{{dislikes}}</a>
             </div>
             <div class='col'>
                 <a class="button button-icon icon ion-social-facebook">
