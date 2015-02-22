@@ -94,20 +94,37 @@ body {
   margin-top: -15px;
 }
 .blackBox {
-  background-color: #000;
   height: 150px;
-  opacity: .3;
+  position: relative;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 5px;
+}
+.blackBox .row {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.blackBox .overlay {
+  opacity: .3;
+  background-color: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 .blackBox .col:first-of-type {
   border: none;
 }
 .blackBox .col {
   border-left: 1px solid white;
+  text-align: center;
+  height: 140px;
 }
 .blackBox p {
   color: #fff;
-  opacity: 1;
 }

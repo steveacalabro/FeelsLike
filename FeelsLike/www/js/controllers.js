@@ -119,12 +119,23 @@ angular.module('starter.controllers', [])
 
     }).success(function(data, status) {
         $scope.forecast = data;
+        $scope.forecastFull = $scope.forecast.forecast.simpleforecast.forecastday;
         $scope.forecast = $scope.forecast.forecast.txt_forecast.forecastday;
-        $scope.forecast = $scope.forecast[0];
+        $scope.forecastNow = $scope.forecast[0];
         
-        window.localStorage['forecast'] = JSON.stringify(data);
+        $scope.forecastTmrw = $scope.forecastFull[1];
+        $scope.forecastDayAfter = $scope.forecastFull[2];
+        $scope.forecastDayAfterNext = $scope.forecastFull[3];
+        
+        console.log($scope.forecastFull);
+        console.log($scope.forecastTmrw);
+        console.log($scope.forecastDayAfter);
+        console.log($scope.forecastDayAfterNext);
+        
+        window.localStorage['forecast'] = JSON.stringify($scope.forecast);
+        window.localStorage['forecastNow'] = JSON.stringify($scope.forecastNow);
     }).error(function(data, status) {
-        var localData = JSON.parse(window.localStorage['forecast'] || '{}');
+        var localData = JSON.parse(window.localStorage['forecase'] || '{}');
 
         if(!localData.length) {
             var alertPopup = $ionicPopup.alert({
@@ -137,7 +148,7 @@ angular.module('starter.controllers', [])
             $scope.showAlert();
         }
         else {
-            $scope.forecast = localData;
+            $scope.forecastNow = localData;
         }
     });
 })

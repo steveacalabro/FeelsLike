@@ -19,8 +19,7 @@
             <div class='col-30 weatherImg'>
                 <p>
                     <img src='{{iconUrl}}' />
-                    <br/>
-                    {{conditions.weather}}
+                    <br/> {{conditions.weather}}
                 </p>
             </div>
         </div>
@@ -49,24 +48,35 @@
         </div>
         <div class='infoBox'>
             <div class='row'>
-                <div class='col'>Actual Temp: {{conditions.temp_f}}</div>
-                <div class='col'>Precip Chance: {{forecast.pop}}</div>
+                <div class='col'>Actual Temp: {{conditions.temp_f}}&deg;</div>
+                <div class='col'>Precip Chance: {{forecastNow.pop}}%</div>
             </div>
             <div class='row'>
-                <div class='col'>Wind: {{conditions.wind_mph}}</div>
+                <div class='col'>Wind: {{conditions.wind_mph}} mph</div>
                 <div class='col'>Humidity: {{conditions.relative_humidity}}</div>
             </div>
         </div>
         <div class='blackBox'>
+            <div class="overlay">
+            </div>
             <div class='row'>
-                <div class='col'>
-                    Mon
+                <div class='col tmrw'>
+                    <p>{{forecastTmrw.date.weekday_short}}</p>
+                    <img src='{{forecastTmrw.icon_url}}' />
+                    <p>{{forecastTmrw.high.fahrenheit}}&deg; | {{forecastTmrw.low.fahrenheit}}&deg;</p>
+                    <p>Precip: {{forecastTmrw.pop}}%</p>
                 </div>
-                <div class='col'>
-                    Tues
+                <div class='col dayAfter'>
+                    <p>{{forecastDayAfter.date.weekday_short}}</p>
+                    <img src='{{forecastDayAfter.icon_url}}' />
+                    <p>{{forecastDayAfter.high.fahrenheit}}&deg; | {{forecastDayAfter.low.fahrenheit}}&deg;</p>
+                    <p>Precip: {{forecastDayAfter.pop}}%</p>
                 </div>
-                <div class='col'>
-                    Wed
+                <div class='col dayAfterNext'>
+                    <p>{{forecastDayAfterNext.date.weekday_short}}</p>
+                    <img src='{{forecastDayAfterNext.icon_url}}' />
+                    <p>{{forecastDayAfterNext.high.fahrenheit}}&deg; | {{forecastDayAfterNext.low.fahrenheit}}&deg;</p>
+                    <p>Precip: {{forecastDayAfterNext.pop}}%</p>
                 </div>
             </div>
         </div>
