@@ -1,0 +1,26 @@
+<ion-view view-title="Playlists">
+    <ion-content class='mainContent'>
+        <ul class='list'>
+            <li class="item item-toggle" ng-click="updateLocalStorage()">
+                NSFW filter
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model='nsfw_toggle'>
+                    <div class="track">
+                        <div class="handle">
+                        </div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle" ng-click="updateCustomInputs()">
+                Custom Inputs
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model='customInputs'>
+                    <div class="track">
+                        <div class="handle">
+                        </div>
+                    </div>
+                </label>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
