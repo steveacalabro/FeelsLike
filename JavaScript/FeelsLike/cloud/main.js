@@ -1,3 +1,9 @@
+
+// Use Parse.Cloud.define to define as many cloud functions as you want.
+// For example:
+Parse.Cloud.define("phrase", function(request, response) {
+  response.success(createPhrase(0, 2, 2, 2, 1, false));
+});
 var good =["it's a'ight", "go have a picinic"];
 var bad = ["you're FUCKED", "if god was lactose intolerant and ate a whole wheel of cheese, that is the weather today"];
 var prefix = ["holy shit,", "goddamnit,", "whoa,", "shit...","woah man,"];
