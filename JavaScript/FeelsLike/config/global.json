@@ -1,11 +1,11 @@
 {
     "applications": {
-        "Feels Like": {
-            "applicationId": "PMrj1OC7vN86rzkSyZUzLzNVvWgBsLAebUSiO58s", 
-            "masterKey": "2xyqzRS2Fa7gr0mpaaJdpFQRuQZiiUrb3E2HTodj"
+        "FeelsLike": {
+            "applicationId": "WAZOc6VldvRSqy8KjNPC71O2MoQRf7Q7K5a3xp37", 
+            "masterKey": "l1YhlcU8AJg6LGVCCEXB3xB5paeuZoW8FVJ0CChG"
         }, 
         "_default": {
-            "link": "Feels Like"
+            "link": "FeelsLike"
         }
     }, 
     "global": {
