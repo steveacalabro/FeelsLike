@@ -1,0 +1,142 @@
+/* Vars */
+
+@whiteTxt: #efefef;
+@mainBar: #4636B8;
+/* Font Stuff */
+
+@font-face {
+    font-family: Comforta;
+    src: url(fonts/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+    font-family: Comforta;
+    src: url(fonts/Comfortaa-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Comforta;
+    src: url(fonts/Comfortaa-Light.ttf);
+    font-weight: lighter;
+}
+/* Nav Bar */
+
+.bar.bar-stable {
+    color: @whiteTxt;
+    background-color: @mainBar;
+}
+
+.bar-stable .button {
+    color: @whiteTxt!important;
+}
+
+.bar.bar-stable .title {
+    color: @whiteTxt;
+}
+/* Side Menu */
+
+.item-complex .item-content,
+.item-radio .item-content {
+    background-color: #444;
+    color: @whiteTxt;
+}
+
+.menu-left {
+    background-color: #444;
+}
+
+.list .item {
+    background-color: #444;
+    border-color: #000;
+    color: @whiteTxt;
+}
+/* Main screen */
+
+body {
+    font-family: Comforta;
+    color: @whiteTxt;
+}
+
+.row {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.weatherImg {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mainContent {
+    background-image: url('../img/bg.png');
+    background-size: 110%;
+}
+
+.feelsLike {
+    margin-top: 60px;
+    
+    p {
+        font-size: 130px;
+    }
+}
+
+.phrase {
+    margin-top: 20px;
+    font-size: 24px;
+    
+    p {
+        line-height: 1.2;
+    }
+}
+
+.actions {
+    a.button {
+        color: @whiteTxt;
+        margin-top: -10px;
+        
+        &.ion-thumbsup.activated {
+            color: green;
+        }
+        &.ion-thumbsdown.activated {
+            color: red;
+        }
+        &.ion-social-facebook.activated {
+            color: #3B5998;
+            opacity: 1;
+        }
+        &.ion-social-twitter.activated {
+            color: #4099FF;
+            opacity: 1;
+        }
+        
+        p {
+            margin-top: -15px;
+        }
+    }
+}
+
+.infoBox {
+    margin-top:-15px;   
+}
+
+.blackBox {
+    background-color: #000;
+    height: 150px;
+    opacity: .3;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;   
+    
+    .col:first-of-type {
+        border: none;   
+    }
+    .col {
+        border-left: 1px solid white;    
+    }
+    
+    p {
+        color: #fff;
+        opacity: 1;
+    }
+}

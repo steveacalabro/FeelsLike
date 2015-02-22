@@ -1,0 +1,113 @@
+/* Vars */
+/* Font Stuff */
+@font-face {
+  font-family: Comforta;
+  src: url(fonts/Comfortaa-Regular.ttf);
+}
+@font-face {
+  font-family: Comforta;
+  src: url(fonts/Comfortaa-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Comforta;
+  src: url(fonts/Comfortaa-Light.ttf);
+  font-weight: lighter;
+}
+/* Nav Bar */
+.bar.bar-stable {
+  color: #efefef;
+  background-color: #4636b8;
+}
+.bar-stable .button {
+  color: #efefef !important;
+}
+.bar.bar-stable .title {
+  color: #efefef;
+}
+/* Side Menu */
+.item-complex .item-content,
+.item-radio .item-content {
+  background-color: #444;
+  color: #efefef;
+}
+.menu-left {
+  background-color: #444;
+}
+.list .item {
+  background-color: #444;
+  border-color: #000;
+  color: #efefef;
+}
+/* Main screen */
+body {
+  font-family: Comforta;
+  color: #efefef;
+}
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.weatherImg {
+  text-align: center;
+  margin-top: 30px;
+}
+.mainContent {
+  background-image: url('../img/bg.png');
+  background-size: 110%;
+}
+.feelsLike {
+  margin-top: 60px;
+}
+.feelsLike p {
+  font-size: 130px;
+}
+.phrase {
+  margin-top: 20px;
+  font-size: 24px;
+}
+.phrase p {
+  line-height: 1.2;
+}
+.actions a.button {
+  color: #efefef;
+  margin-top: -10px;
+}
+.actions a.button.ion-thumbsup.activated {
+  color: green;
+}
+.actions a.button.ion-thumbsdown.activated {
+  color: red;
+}
+.actions a.button.ion-social-facebook.activated {
+  color: #3B5998;
+  opacity: 1;
+}
+.actions a.button.ion-social-twitter.activated {
+  color: #4099FF;
+  opacity: 1;
+}
+.actions a.button p {
+  margin-top: -15px;
+}
+.infoBox {
+  margin-top: -15px;
+}
+.blackBox {
+  background-color: #000;
+  height: 150px;
+  opacity: .3;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.blackBox .col:first-of-type {
+  border: none;
+}
+.blackBox .col {
+  border-left: 1px solid white;
+}
+.blackBox p {
+  color: #fff;
+  opacity: 1;
+}

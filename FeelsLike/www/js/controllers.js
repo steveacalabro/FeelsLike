@@ -88,7 +88,11 @@ angular.module('starter.controllers', [])
     }).success(function(data, status) {
         $scope.conditions = data;
         $scope.conditions = $scope.conditions.current_observation
-        console.log($scope.conditions);
+        
+        $scope.iconUrl = $scope.conditions.icon_url;
+        $scope.iconUrl = $scope.iconUrl.split('/k/');
+        $scope.iconUrl = $scope.iconUrl[0] + '/i/' + $scope.iconUrl[1];
+        
         window.localStorage['conditions'] = JSON.stringify(data);
     }).error(function(data, status) {
         var localData = JSON.parse(window.localStorage['conditions'] || '{}');
@@ -107,7 +111,7 @@ angular.module('starter.controllers', [])
             $scope.conditions = localData;
         }
     });
-    //forcast infor
+    //forcast info
     var httpRequest = $http({
         method: 'GET',
         url: 'http://api.wunderground.com/api/36a91acd8ae6d705/forecast/q/'+zip+'.json',
@@ -117,7 +121,7 @@ angular.module('starter.controllers', [])
         $scope.forecast = data;
         $scope.forecast = $scope.forecast.forecast.txt_forecast.forecastday;
         $scope.forecast = $scope.forecast[0];
-        console.log($scope.forecast);
+        
         window.localStorage['forecast'] = JSON.stringify(data);
     }).error(function(data, status) {
         var localData = JSON.parse(window.localStorage['forecast'] || '{}');

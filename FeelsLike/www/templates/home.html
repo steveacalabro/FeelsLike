@@ -1,31 +1,74 @@
 <ion-view view-title="Feels Like">
-    <ion-content>
+    <ion-content class='mainContent'>
         <!--<div class="row">
             <div class="col">
                 <p>Zip: {{userLocation}}</p>
             </div>
         </div>-->
         <div class='row'>
-            <div class='col'>
-                <p>{{conditions.weather}}</p>
-                <img src='{{conditions.icon_url}}' />
-            </div>
-            <div class='col'>
-                <p>Feels like: {{conditions.feelslike_f}}</p>
+            <div class='col type'>
+                Feels Like:
             </div>
         </div>
         <div class='row'>
-            <div clas='col'>
+            <div class='col-70 feelsLike'>
+                <p>
+                    {{conditions.feelslike_f}}&deg;
+                </p>
+            </div>
+            <div class='col-30 weatherImg'>
+                <p>
+                    <img src='{{iconUrl}}' />
+                    <br/>
+                    {{conditions.weather}}
+                </p>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col phrase'>
                 <p>"It's cold as balls and fucking snowing"</p>
             </div>
         </div>
-        <div class='row'>
-            <div class='col'>Actual Temp: {{conditions.temp_f}}</div>
-            <div class='col'>Precip Chance: {{forecast.pop}}</div>
+        <div class='row actions'>
+            <div class='col'>
+                <a class="button button-icon icon ion-thumbsup">&nbsp;+10</a>
+            </div>
+            <div class='col'>
+                <a class="button button-icon icon ion-thumbsdown">&nbsp;-10</a>
+            </div>
+            <div class='col'>
+                <a class="button button-icon icon ion-social-facebook">
+                    <p>Share</p>
+                </a>
+            </div>
+            <div class='col'>
+                <a class="button button-icon icon ion-social-twitter">
+                    <p>Tweet</p>
+                </a>
+            </div>
         </div>
-        <div class='row'>
-            <div class='col'>Wind: {{conditions.wind_mph}}</div>
-            <div class='col'>Humidity: {{conditions.relative_humidity}}</div>
+        <div class='infoBox'>
+            <div class='row'>
+                <div class='col'>Actual Temp: {{conditions.temp_f}}</div>
+                <div class='col'>Precip Chance: {{forecast.pop}}</div>
+            </div>
+            <div class='row'>
+                <div class='col'>Wind: {{conditions.wind_mph}}</div>
+                <div class='col'>Humidity: {{conditions.relative_humidity}}</div>
+            </div>
+        </div>
+        <div class='blackBox'>
+            <div class='row'>
+                <div class='col'>
+                    Mon
+                </div>
+                <div class='col'>
+                    Tues
+                </div>
+                <div class='col'>
+                    Wed
+                </div>
+            </div>
         </div>
     </ion-content>
 </ion-view>
