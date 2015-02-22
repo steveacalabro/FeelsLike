@@ -132,7 +132,55 @@ angular.module('starter.controllers', [])
 
             });
         }
+        
+        $scope.facebook = function () {
+            $scope.data = {};
+            var alertPopup = $ionicPopup.alert({
+                title: 'Facebook',
+                scope: $scope,
+                buttons: [
+                    {
+                        text: 'Cancel'
+                    },
+                    {
+                        text: '<b>Share</b>',
+                        type: 'button-positive',
+                        onTap: function (e) {
+                            //$state.go('app.submitPhrase');
+                            //$scope.phrase = $scope.data.ownPhrase;
+                        }
+                    }
+                ]
+            });
+            alertPopup.then(function (res) {
 
+            });
+        }
+        
+        $scope.twitter = function () {
+            $scope.data = {};
+            var alertPopup = $ionicPopup.alert({
+                title: 'Twitter',
+                scope: $scope,
+                buttons: [
+                    {
+                        text: 'Cancel'
+                    },
+                    {
+                        text: '<b>Tweet</b>',
+                        type: 'button-positive',
+                        onTap: function (e) {
+                            //$state.go('app.submitPhrase');
+                            //$scope.phrase = $scope.data.ownPhrase;
+                        }
+                    }
+                ]
+            });
+            alertPopup.then(function (res) {
+
+            });
+        }
+        
         var httpRequest = $http({
             method: 'GET',
             url: 'http://api.wunderground.com/api/36a91acd8ae6d705/geolookup/q/autoip.json ',
